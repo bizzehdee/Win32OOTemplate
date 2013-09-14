@@ -3,6 +3,11 @@
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) 
 {
-	App app;
-	return app.Run();
+	int RetVal = 0;
+
+	App *app = new App();
+	RetVal = app->Run();
+	delete app;
+
+	return RetVal;
 }
